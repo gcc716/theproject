@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="icon.jpeg" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+    <title>Gisele Bündchen</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+<div class="viagens" style="display: none;">
+  <div class="ticket">
+    <div class="card">
+      
+      <div>
+        <h2>Insira seus dados para confirmar compra</h2>
+        <div class="inputs">
+        
+        
+                <input type="text" placeholder="Nome:">
+              <input type="text" placeholder="Código de reserva + origem">
+              <input type="text" placeholder="Digite o código">
+                
+              <input type="email" placeholder="E-mail">
+			  
+			  <button id="voar" >Fechar</button>
+			  <button>Comprar</button>
+            </div>
+          </div>
+        </div> <!-- fechamento correto da .inputs -->
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="day">
+
+<input type="date">
+
+<input type="time">
+</div>
+
+<div class="img"></div>
+<div class="submenu-container">
+  <div class="submenu">
+    <label>
+      <p>Local de Início</p>
+      <select name="inicio">
+        <option value="los-santos">Los Santos</option>
+        <option value="san-fierro">San Fierro</option>
+        <option value="las-ventura">Las Ventura</option>
+        <option value="liberty-city">Liberty City</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="submenu">
+    <label>
+      <p>Destino</p>
+      <select name="destino">
+        <option value="los-santos">Los Santos</option>
+        <option value="san-fierro">San Fierro</option>
+        <option value="las-ventura">Las Ventura</option>
+        <option value="liberty-city">Liberty City</option>
+      </select>
+    </label>
+	 
+  </div>
+  <div class="final">
+ <button id="compra">Finalizar</button>
+ </div>
+</div>
+<div class="button">
+ <a href="meme.html"><button>Voltar</button></a>
+ </button>
+<div class="run">
+        <img src="Aviao.png">
+    </div>
+
+    <script>
+  let movingDiv = document.getElementsByClassName('run')[0];
+let position = 0;
+let direction = 1;
+
+const speed = 0.40;
+
+function moveDiv() {
+    // Atualiza a posição da div
+    position += direction * speed;
+    movingDiv.style.left = position + "px";
+
+    // Verifica se atingiu a borda da janela
+    if (position + movingDiv.offsetWidth >= window.innerWidth || position <= 0) {
+        direction *= -1; // Inverte a direção do movimento
+    }
+
+    // Solicita a próxima animação
+    requestAnimationFrame(moveDiv);
+}
+
+// Inicia a animação
+moveDiv();
+    </script>
+<script src="comprar.js"></script>
+</body>
+</html>
